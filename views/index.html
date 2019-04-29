@@ -1,21 +1,20 @@
+<!DOCTYPE html>
 <html>
-    
-    <meta charset="utf-8">
-    <head><title>{{'Home page'}}</title></head>
-    <body>
-         %if not mess:
-      	     %pass
-         %else:
-             <h3>{{mess}}</h3>
-         %end
-         <h4>Create page</h4>
-         <form action="/add" method="post">
-            <p>Title:</p>
-            <input name="title" type="text" /><br>
-	    <p>Text:</p>
-            <p><textarea rows="10" cols="45" name="text"></textarea></p><br>
-            <input value="Write" type="submit" />
-        </form>
-
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Blogs | List</title>
+</head>
+<body>
+<h1>List of entries</h1>
+<div class="Special">
+%if bool(mess):
+    %for i in mess:
+    <p><a href="/blog/{{i[0]}}">{{i[0]}}. {{i[2].strip()}}</a></p>
+    %end
+%else:
+    <p>No more list.</p>
+    </div>
+%end
+</body>
 </html>

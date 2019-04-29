@@ -1,0 +1,8 @@
+body {
+    text-align: center;
+    background: rgb(255, 255, 255);
+}
+.Special {
+    border: 4px double black;
+    background: aliceblue;
+}

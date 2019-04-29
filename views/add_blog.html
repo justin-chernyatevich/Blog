@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    
+    <meta charset="utf-8">
+    <head><title>{{'Home page'}}</title></head>
+    <body>
+         %if not mess:
+      	     %pass
+         %else:
+             <h3>{{mess}}</h3>
+         %end
+         <h4>Create page</h4>
+         <form action="/add" method="post">
+            <p>Title:</p>
+            <input name="title" type="text" /><br>
+	    <p>Text:</p>
+            <p><textarea rows="10" cols="45" name="text"></textarea></p><br>
+            <input value="Write" type="submit" />
+        </form>
+
+    </body>
+</html>
