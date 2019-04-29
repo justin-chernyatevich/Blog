@@ -1,2 +1,2 @@
 bottle
-sqlite3
+pysqlite3
