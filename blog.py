@@ -74,4 +74,4 @@ def display_entries(id_blog):
 
 if __name__ == "__main__":
     init_db()
-    run(host="192.168.88.225", port="9100")
+    run(host="0.0.0.0", port="9100")
