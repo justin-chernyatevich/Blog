@@ -72,6 +72,5 @@ def display_entries(id_blog):
         abort(404, "Not found: '/blog/%s'" % str(id_blog))
 
 
-if __name__ == "__main__":
-    init_db()
-    run(host="0.0.0.0", port="9100")
+init_db()
+run(host="0.0.0.0", port="9100")
