@@ -1,3 +1,4 @@
+import os
 import sqlite3
 from bottle import run, route, template, \
     request, abort, \
@@ -72,5 +73,7 @@ def display_entries(id_blog):
         abort(404, "Not found: '/blog/%s'" % str(id_blog))
 
 
-init_db()
-run(host="0.0.0.0", port="9100")
+if __name__ == "__main__":
+    init_db()
+    port = os.environ.get('PORT', 5000)
+    run(host="0.0.0.0", port=port)
